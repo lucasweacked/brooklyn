@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Raleway:wght@400;600;700;800&display=swap');
+
+:root {
+    --font-principal: 'Montserrat', sans-serif;
+    --font-secundaria: 'Raleway', sans-serif;
+
+    --cor-footer: #222222;
+    --cor-footer-texto: #f7f7f7;
+
+    --cor-time-texto: #181818;
+    --cor-player-card-border: #181818;
+    --cor-player-card-name: #333333;
+    --cor-player-card-position: #666666;
+    --cor-player-card-number-bg: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    background-color: var(--cor-footer);
+    padding: 1% 12%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.cabecalho__logo {
+    height: 4rem;
+}
+
+.cabecalho__menu {
+    color: var(--cor-footer-texto);
+    font-family: var(--font-principal);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    gap: 2rem;
+}
+
+.cabecalho__menu__link {
+    text-decoration: none;
+    color: var(--cor-footer-texto);
+    position: relative;
+}
+
+.cabecalho__menu__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    width: 0;
+    height: 0.125rem;
+    background-color: var(--cor-footer-texto);
+    transition: width 0.3s ease;
+}
+
+.cabecalho__menu__link:hover::after {
+    width: 100%;
+}
+
+.cabecalho__menu__link:hover {
+    text-decoration: none;
+    text-underline-offset: 0.5rem;
+}
+
+.time {
+    padding: 3% 8%;
+    background-color: var(--cor-footer-texto);
+}
+
+.time__conteudo {
+    align-items: center;
+}
+
+.time__conteudo__titulo {
+    color: var(--cor-time-texto);
+    font-family: var(--font-secundaria);
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.time__conteudo__jogadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.time__conteudo__container {
+    display: flex;
+    width: 90%;
+    max-width: 87.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.time__conteudo__container__player-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    /* border-right: 0.1875rem solid var(--cor-player-card-border); */
+    margin-bottom: 2rem;
+}
+
+.time__conteudo__container__player-card:last-child {
+    border-right: none;
+}
+
+.time__conteudo__container__player-card__number {
+    position: absolute;
+    font-size: 12.5rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    color: var(--cor-time-texto);
+    top: -2.5rem;
+    line-height: 1;
+    z-index: 0;
+}
+
+.time__conteudo__container__player-card img {
+    width: 21.875rem;
+    height: auto;
+    margin-top: 1.875rem;
+    z-index: 1;
+}
+
+.time__conteudo__container__player-card__info {
+    width: 95%;
+    text-align: center;
+    padding: 0.9375rem 0;
+    border-top: 0.3125rem solid var(--cor-player-card-border);
+}
+
+.time__conteudo__container__player-card__jersey-number {
+    font-size: 2rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    color: var(--cor-player-card-name);
+    margin-top: 0.625rem;
+}
+
+.time__conteudo__container__player-card__name {
+    font-size: 1.5rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    color: var(--cor-player-card-name);
+    display: block;
+    margin-top: 0.625rem;
+}
+
+.time__conteudo__container__player-card__position {
+    font-size: 1.125rem;
+    font-family: var(--font-principal);
+    color: var(--cor-player-card-position);
+    display: block;
+}
+
+.time__conteudo__container__player-card__number-background {
+    position: absolute;
+    top: 5rem;
+    font-size: 7.5rem;
+    color: #000;
+    opacity: 0.1;
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Raleway:wght@400;600;700;800&display=swap');
+
+:root {
+    --font-principal: 'Montserrat', sans-serif;
+    --font-secundaria: 'Raleway', sans-serif;
+
+    /* Header */
+    --cor-footer: #222222;
+    --cor-footer-texto: #f7f7f7;
+
+    /* Main */
+    --cor-main-texto: #000000;
+
+    /* Time */
+    --cor-time-texto: #f7f7f7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    background-color: var(--cor-footer);
+    padding: 1% 12%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.cabecalho__logo {
+    height: 4rem;
+}
+
+.cabecalho__menu {
+    color: var(--cor-footer-texto);
+    font-family: var(--font-principal);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    gap: 2rem;
+}
+
+.cabecalho__menu__link {
+    text-decoration: none;
+    color: var(--cor-footer-texto);
+    position: relative;
+}
+
+.cabecalho__menu__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-footer-texto);
+    transition: width 0.3s ease;
+}
+
+.cabecalho__menu__link:hover::after {
+    width: 100%;
+}
+
+.cabecalho__menu__link:hover {
+    text-decoration: none;
+    text-underline-offset: 0.8rem;
+}
+
+.apresentacao {
+    padding: 3% 8%;
+}
+
+.apresentacao__conteudo__titulo {
+    color: var(--cor-main-texto);
+    font-family: var(--font-secundaria);
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.apresentacao__conteudo__paragrafo {
+    color: var(--cor-main-texto);
+    font-family: var(--font-principal);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.time {
+    padding: 3% 8%;
+    background-color: #242526;
+}
+
+.time__conteudo__titulo {
+    color: var(--cor-time-texto);
+    font-family: var(--font-secundaria);
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
