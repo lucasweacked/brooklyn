@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Raleway:wght@400;600;700;800&display=swap');
 
 :root {
-    --font-principal: 'Montserrat', sans-serif;
-    --font-secundaria: 'Raleway', sans-serif;
+    --fontPrincipal: 'Montserrat', sans-serif;
+    --fontSecundaria: 'Raleway', sans-serif;
 
     /* Header */
     --cor-footer: #222222;
@@ -20,6 +20,10 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .cabecalho {
     background-color: var(--cor-footer);
     padding: 1% 12%;
@@ -30,11 +34,13 @@
 
 .cabecalho__logo {
     height: 4rem;
+    user-select: none;
+    pointer-events: none;
 }
 
 .cabecalho__menu {
     color: var(--cor-footer-texto);
-    font-family: var(--font-principal);
+    font-family: var(--fontPrincipal);
     font-size: 1rem;
     font-weight: 600;
     display: flex;
@@ -73,7 +79,7 @@
 
 .apresentacao__conteudo__titulo {
     color: var(--cor-main-texto);
-    font-family: var(--font-secundaria);
+    font-family: var(--fontSecundaria);
     font-weight: 600;
     text-align: center;
     font-size: 2rem;
@@ -82,7 +88,7 @@
 
 .apresentacao__conteudo__paragrafo {
     color: var(--cor-main-texto);
-    font-family: var(--font-principal);
+    font-family: var(--fontPrincipal);
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -94,9 +100,169 @@
 
 .time__conteudo__titulo {
     color: var(--cor-time-texto);
-    font-family: var(--font-secundaria);
+    font-family: var(--fontSecundaria);
     font-weight: 600;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+.rodape {
+    background-color: var(--cor-footer);
+    color: var(--cor-footer-texto);
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+}
+
+.rodape__conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    width: 100%;
+    text-align: center;
+}
+
+.rodape__conteudo__logo {
+    width: 3.75rem;
+}
+
+.rodape__conteudo__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape__conteudo__redes a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.rodape__conteudo__redes a:hover {
+    color: #0052cc;
+    transform: scale(1.2);
+}
+
+.rodape__conteudo__paragrafo {
+    font-size: 1rem;
+    font-family: var(--fontPrincipal);
+    color: var(--cor-footer-texto);
+    text-align: center;
+    margin-top: 0.625rem;
+}
+
+.rodape__conteudo__endereco {
+    text-align: right;
+}
+
+.rodape__conteudo__endereco__paragrafo {
+    line-height: 1.5;
+    font-size: 0.875rem;
+    font-family: var(--fontSecundaria);
+    margin: 0;
+}
+
+/* Responsividade para telas menores que 1024px (tablets e laptops pequenos) */
+@media (max-width: 1024px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1% 5%;
+    }
+
+    .cabecalho__menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .rodape__conteudo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .rodape__conteudo__endereco {
+        text-align: center;
+    }
+}
+
+/* Responsividade para telas menores que 768px (smartphones maiores e tablets pequenos) */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 1rem;
+    }
+
+    .apresentacao {
+        padding: 2% 5%;
+    }
+
+    .time {
+        padding: 3% 5%;
+    }
+
+    .rodape {
+        padding: 3%;
+    }
+
+    .rodape__conteudo__logo {
+        width: 3rem;
+    }
+
+    .rodape__conteudo__paragrafo {
+        font-size: 0.875rem;
+    }
+
+    .rodape__conteudo__redes a {
+        font-size: 1.5rem;
+        margin: 0 5px;
+    }
+}
+
+/* Responsividade para telas menores que 576px (smartphones pequenos) */
+@media (max-width: 576px) {
+    .cabecalho {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .cabecalho__logo {
+        height: 3rem;
+    }
+
+    .cabecalho__menu {
+        font-size: 0.875rem;
+        gap: 0.5rem;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem;
+    }
+
+    .apresentacao__conteudo__paragrafo {
+        font-size: 1rem;
+    }
+
+    .time__conteudo__titulo {
+        font-size: 1.5rem;
+    }
+
+    .rodape__conteudo__logo {
+        width: 2.5rem;
+    }
+
+    .rodape__conteudo__paragrafo {
+        font-size: 0.75rem;
+    }
+
+    .rodape__conteudo__redes a {
+        font-size: 1.2rem;
+        margin: 0 5px;
+    }
 }
