@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn Nets</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
     <link rel="icon" href="./assets/img/bkn_logo.png" type="image/png">
 </head>
 <body>
 
     <header class="cabecalho">
-        <img src="./assets/img/bkn_logo.png" class="cabecalho__logo" alt="Brooklyn Nets logo.">
+        <img src="./assets/img/bkn_logo.png" class="cabecalho__logo" alt="Brooklyn Nets logo." draggable="false">
 
         <nav class="cabecalho__menu">
             <a class="cabecalho__menu__link" href="#history">HISTORY</a>
@@ -31,7 +32,7 @@
 
     <main class="apresentacao" id="history">
         <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">BROOKLYN NETS HISTORY</h1>
+            <h1 class="apresentacao__conteudo__titulo" id="title">BROOKLYN NETS HISTORY</h1>
 
             <p class="apresentacao__conteudo__paragrafo" id="p1">
                 The Brooklyn Nets is one of the most iconic teams in the NBA, not only for their talent on the court but also for their deep connection with the rich culture and history of Brooklyn. Founded in 1967 as the New Jersey Americans and later known as the New Jersey Nets, the team moved to the Barclays Center in the heart of Brooklyn in 2012. Since then, the franchise has embraced the authenticity and creative spirit of the borough, making the Brooklyn Nets more than just a basketball team - it is a cultural symbol.
@@ -59,9 +60,34 @@
         </section>
     </main>
     
-    <footer>
-
-    </footer>
+    <footer class="rodape">
+        <section class="rodape__conteudo">
+            <img src="./assets/img/bkn_logo.png" class="rodape__conteudo__logo" alt="Brooklyn Nets logo.">
+    
+            <section class="rodape__conteudo__texto">
+                <section class="rodape__conteudo__redes">
+                    <a href="https://www.linkedin.com/in/lucasbarrossimon/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <i class="ri-linkedin-box-fill"></i>
+                    </a>
+                    <a href="https://github.com/lucasweacked" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/21lucasbarros/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/21lucasbarros/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </section>
+                <p class="rodape__conteudo__paragrafo">"We go hard! Let's go Nets!"</p>
+            </section>
+    
+            <section class="rodape__conteudo__endereco">
+                <p class="rodape__conteudo__endereco__paragrafo">Barclays Center, 620 Atlantic Ave,<br>Brooklyn, NY 11217</p>
+            </section>
+        </section>
+    </footer>    
 
     <script src="./script/script.js"></script>
 
